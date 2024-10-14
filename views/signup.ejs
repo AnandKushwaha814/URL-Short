@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f9;
+        /* margin: 0; */
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        margin-top: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        /* margin-bottom: 20px; */
+      }
+
+      .container {
+        max-width: 400px;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      label {
+        font-size: 16px;
+        color: black;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        width: 95%;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-color: #007bff;
+        padding: 10px;
+        outline: none;
+      }
+
+      button {
+        padding: 12px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        font-weight: 100;
+        transition: background-color 0.3s ease;
+      }
+      .submit {
+        text-align: center;
+      }
+      a {
+        border-radius: 10px;
+        color: blue;
+        text-decoration: none;
+      }
+
+      button:hover {
+        background-color: #1eef13;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .container {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SignUp</h1>
+      <form action="/user" method="post">
+        <div>
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            required
+            name="name"
+            placeholder="Enter Your Full Name"
+          />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            id="email"
+            required
+            name="email"
+            placeholder="Enter Your Email"
+          />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            required
+            name="password"
+            placeholder="Enter Password"
+          />
+        </div>
+        <div class="submit">
+          <button type="submit">Signup</button>
+          <p style="font-size: 1rem; font-weight: 700">
+            Have an Account? <a href="/login">Login</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
